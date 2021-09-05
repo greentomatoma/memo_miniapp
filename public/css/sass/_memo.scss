@@ -1,3 +1,71 @@
 .memo {
   display: flex;
+  margin-top: 18px;
+}
+
+.memo-list {
+  width: 25%;
+  border-right: 1px solid rgb(182, 182, 182);
+
+  &__top {
+    display: flex;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+
+  &__item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(182, 182, 182);
+  }
+
+}
+
+.memo-menu {
+  text-align: right;
+}
+
+
+
+/* 右側 */
+
+.memo-input {
+  width: 70%;
+  margin-left: 10px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__menu {
+    text-align: right;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* ボタン */
+.btn {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+}
+
+.plus, .save {
+  background-color: rgb(25, 148, 25);
+}
+
+.sign-out {
+  background-color: rgb(64, 70, 64);
+}
+
+.trash {
+  background-color: rgb(221, 38, 38);
 }

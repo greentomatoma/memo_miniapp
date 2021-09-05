@@ -1,3 +1,9 @@
+@charset "UTF-8";
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+
 .content {
   background-color: #7cafaf;
 }
@@ -6,4 +12,74 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 18px;
+}
+
+.memo-list {
+  width: 25%;
+  border-right: 1px solid #b6b6b6;
+}
+
+.memo-list__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.memo-list__title {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.memo-list__item {
+  padding: 10px 0;
+  border-bottom: 1px solid #b6b6b6;
+}
+
+.memo-menu {
+  text-align: right;
+}
+
+/* 右側 */
+.memo-input {
+  width: 70%;
+  margin-left: 10px;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input__menu {
+  text-align: right;
+}
+
+.input__title {
+  font-size: 1.3rem;
+}
+
+/* ボタン */
+.btn {
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+}
+
+.plus, .save {
+  background-color: #199419;
+}
+
+.sign-out {
+  background-color: #404640;
+}
+
+.trash {
+  background-color: #dd2626;
 }

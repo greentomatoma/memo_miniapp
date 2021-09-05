@@ -8,20 +8,20 @@
       <div id="container">
           <div class="memo">
               <div class="memo-list">
-                  <div class="left-memo-menu d-flex justify-content-between pt-2">
-                      <div class="pl-3 pt-2">
+                  <div class="memo-list__top">
+                      <div class="user-name">
                           xxxさん、こんにちは。
                       </div>
-                      <div class="pr-1">
-                          <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
-                          <a href="../login/" class="btn btn-dark"><i class="fas fa-sign-out-alt"></i></a>
+                      <div class="memo-list__btn">
+                          <a href="" class="btn plus"><i class="fas fa-plus"></i></a>
+                          <a href="../login/" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
                       </div>
                   </div>
-                  <div class="left-memo-title h3 pl-3 pt-3">
+                  <div class="memo-list__title">
                       メモリスト
                   </div>
-                  <div class="left-memo-list list-group-flush p-0">
-                      <a href="#" class="list-group-item list-group-item-action">
+                  <div class="memo-list__items">
+                      <a href="#" class="memo-list__item">
                           <div class="d-flex w-100 justify-content-between">
                               <h5 class="mb-1">メモタイトル1</h5>
                               <small>2020/08/01 09:00</small>
@@ -30,7 +30,7 @@
                               メモ詳細1
                           </p>
                       </a>
-                      <a href="#" class="list-group-item list-group-item-action">
+                      <a href="#" class="memo-list__item">
                           <div class="d-flex w-100 justify-content-between">
                               <h5 class="mb-1">メモタイトル2</h5>
                               <small>2020/08/01 09:00</small>
@@ -39,7 +39,7 @@
                               メモ詳細2
                           </p>
                       </a>
-                      <a href="#" class="list-group-item list-group-item-action">
+                      <a href="#" class="memo-list__item">
                           <div class="d-flex w-100 justify-content-between">
                               <h5 class="mb-1">メモタイトル3</h5>
                               <small>2020/08/01 09:00</small>
@@ -51,14 +51,14 @@
                   </div>
               </div>
               <div class="memo-input">
-                  <form class="w-100 h-100" method="post">
+                  <form class="input" method="post">
                       <input type="hidden" name="edit_id" value="" />
-                      <div id="memo-menu">
-                          <button type="submit" class="btn btn-danger" formaction=""><i class="fas fa-trash-alt"></i></button>
-                          <button type="submit" class="btn btn-success" formaction=""><i class="fas fa-save"></i></button>
+                      <div class="input__menu">
+                          <button type="submit" class="btn trash" formaction=""><i class="fas fa-trash-alt"></i></button>
+                          <button type="submit" class="btn save" formaction=""><i class="fas fa-save"></i></button>
                       </div>
-                      <input type="text" id="memo-title" name="edit_title" placeholder="タイトルを入力する..." value="" />
-                      <textarea id="memo-content" name="edit_content" placeholder="内容を入力する..."></textarea>
+                      <input type="text" id="memo-title" class="input__title" name="edit_title" placeholder="タイトルを入力する..." value="" />
+                      <textarea id="memo-content" name="edit_content" class="input__content" placeholder="内容を入力する..."></textarea>
                   </form>
               </div>
           </div>
