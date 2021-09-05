@@ -9,7 +9,7 @@
     <body>
       <div id="container">
         <div class="content">
-          <form action="../memo/" method="post">
+          <form action="./action/register.php" method="post">
             <div class="form">
               <div class="form__image">
                 <img src="#">
