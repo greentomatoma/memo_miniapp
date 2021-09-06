@@ -11,9 +11,6 @@
         <div class="content">
           <form action="../memo/" method="post">
             <div class="form">
-              <div class="form__image">
-                <img src="#">
-              </div>
               <div class="form__body">
                 <h1 class="form__title">MEMO</h1>
                 <div class="form__input">
