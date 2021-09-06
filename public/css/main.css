@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.alert {
+  background-color: #ffdede;
+  width: 400px;
+  margin: 30px auto;
+  border: 1px solid #cc6767;
+  border-radius: 5px;
+}
+
+.alert__text {
+  color: #ad4343;
+}
+
 a {
   color: #5a5a5a;
   text-decoration: none;

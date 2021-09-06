@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
     <?php
+        session_start();
+
         // ファイルの読み込み
         include_once "../common/header.php";
         echo getHeader("ユーザー登録");
@@ -11,6 +13,16 @@
         <div class="content">
           <form action="./action/register.php" method="post">
               <div class="form__body">
+                <?php 
+                  if(isset($_SESSION['errors'])) {
+                    echo '<div class="alert" role="alert">';
+                    foreach($_SESSION['errors'] as $error) {
+                      echo "<div class='alert__text'>{$error}</div>";
+                    }
+                    echo '</div>';
+                    unset($_SESSION['errors']);
+                  }
+                ?>
                 <h1 class="form__title">MEMO</h1>
                 <div class="form__input">
                   <label class="input-group">

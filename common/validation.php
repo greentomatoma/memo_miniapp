@@ -38,7 +38,7 @@
    */
 
   function stringMaxSizeCheck(&$errors, $check_value, $message, $max_size = 255) {
-    if(mb_strlen($check_value) < $max_size) {
+    if(mb_strlen($check_value) > $max_size) {
       array_push($errors, $message);
     }
   }
