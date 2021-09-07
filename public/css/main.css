@@ -16,10 +16,6 @@ a {
   text-decoration: none;
 }
 
-.content {
-  background-color: #7cafaf;
-}
-
 .form {
   width: 500px;
   height: 800px;
@@ -48,6 +44,14 @@ a {
   border: 1px solid #45b345;
   border-radius: 5px;
   color: white;
+}
+
+.form__text {
+  text-align: center;
+}
+
+.form__rink {
+  color: green;
 }
 
 .input-group {
