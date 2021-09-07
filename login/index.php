@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <?php
@@ -9,9 +13,19 @@
     <body>
       <div id="container">
         <div class="content">
-          <form action="../memo/" method="post">
+          <form action="./action/login.php" method="post">
             <div class="form">
               <div class="form__body">
+              <?php 
+                  if(isset($_SESSION['errors'])) {
+                    echo '<div class="alert" role="alert">';
+                    foreach($_SESSION['errors'] as $error) {
+                      echo "<div class='alert__text'>{$error}</div>";
+                    }
+                    echo '</div>';
+                    unset($_SESSION['errors']);
+                  }
+                ?>
                 <h1 class="form__title">MEMO</h1>
                 <div class="form__input">
                   <label class="input-group">
@@ -29,6 +43,10 @@
                   <button type="submit" class="form__btn">
                       ログイン
                   </button>
+                  <div class="form__text">
+                    <p>アカウントをお持ちではありませんか？</p>
+                    <a class="form__rink" href="../user/index.php">アカウントを作成</a>
+                  </div>
                 </div>
               </div>
             </div>
