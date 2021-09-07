@@ -1,3 +1,12 @@
+<?php
+    require '../common/auth.php';
+
+    if (!isLogin()) {
+      header('Location: ../login/');
+      exit;
+    }  
+?>
+
 <!DOCTYPE html>
 <html lang="ja">    
     <?php
@@ -13,7 +22,7 @@
                           xxxさん、こんにちは。
                       </div>
                       <div class="memo-list__btn">
-                          <a href="" class="btn plus"><i class="fas fa-plus"></i></a>
+                          <a href="#" class="btn plus"><i class="fas fa-plus"></i></a>
                           <a href="../login/" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
                       </div>
                   </div>
