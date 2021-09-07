@@ -6,7 +6,7 @@
 
   function getDatabaseConnection() {
     try {
-      $database_handler = new PDO("mysql:host=localhost; port=8889; dbname=memo_app; charset=utf8mb4", "root", " ");
+      $database_handler = new PDO("mysql:host=localhost;port=8889;dbname=memo_app;" , "root", "root");
     }
     catch(PDOException $e) {
       echo "DB接続に失敗しました。<br />";
