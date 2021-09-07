@@ -54,6 +54,12 @@
       $statement->bindParam(':email', $user_email);
       $statement->bindParam(':password', $password);
       $statement->execute();
+
+      // ユーザー情報保持
+      $_SESSION['user'] = [
+        'name' => $user_name,
+        'id' => $database_handler->lastInsertId(),
+      ];
     }
   }
   catch(Throwable $e) {

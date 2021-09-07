@@ -1,8 +1,10 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <?php
-        session_start();
-
         // ファイルの読み込み
         include_once "../common/header.php";
         echo getHeader("ユーザー登録");
