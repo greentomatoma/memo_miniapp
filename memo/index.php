@@ -45,7 +45,7 @@
               <div class="memo-list">
                   <div class="memo-list__top">
                       <div class="user-name">
-                          xxxさん、こんにちは。
+                          <?php echo $user_name; ?> さん、こんにちは。
                       </div>
                       <div class="memo-list__btn">
                           <a href="./action/add.php" class="btn plus"><i class="fas fa-plus"></i></a>
@@ -56,33 +56,29 @@
                       メモリスト
                   </div>
                   <div class="memo-list__items">
-                      <a href="#" class="memo-list__item">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">メモタイトル1</h5>
-                              <small>2020/08/01 09:00</small>
+                      
+                      <?php if(empty($memos)): ?>
+                        <div class="no-info">
+                            <i class="far fa-surprise"></i>メモがありません。
+                        </div>
+                      <?php endif; ?>
+                      <?php foreach($memos as $memo): ?>
+                      <a href="./action/select.php?id=<?php echo $memo['id']; ?>" class="memo-list__item">
+                          <div class="item-content <?php echo $edit_id == $memo['id'] ? 'active' : ''; ?>">
+                              <h5 class="mb-1"><?php echo $memo['title']; ?></h5>
+                              <small><?php echo date('Y/m/d H:i', strtotime($memo['updated_at'])); ?></small>
                           </div>
                           <p class="mb-1">
-                              メモ詳細1
+                              <?php 
+                                if(mb_strlen($memo['content']) <= 100) {
+                                    echo $memo['content'];
+                                } else {
+                                    echo mb_substr($memo['content'], 0, 100) . "...";
+                                }
+                              ?>
                           </p>
                       </a>
-                      <a href="#" class="memo-list__item">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">メモタイトル2</h5>
-                              <small>2020/08/01 09:00</small>
-                          </div>
-                          <p class="mb-1">
-                              メモ詳細2
-                          </p>
-                      </a>
-                      <a href="#" class="memo-list__item">
-                          <div class="d-flex w-100 justify-content-between">
-                              <h5 class="mb-1">メモタイトル3</h5>
-                              <small>2020/08/01 09:00</small>
-                          </div>
-                          <p class="mb-1">
-                              メモ詳細3
-                          </p>
-                      </a>
+                      <?php endforeach; ?>
                   </div>
               </div>
               <div class="memo-input">

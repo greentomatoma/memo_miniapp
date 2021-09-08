@@ -21,6 +21,23 @@
     border-bottom: 1px solid rgb(182, 182, 182);
   }
 
+  .item-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+    padding: 5px 5px 20px 5px;
+  }
+
+  .active {
+    background-color: #317CF6;
+    color: white;
+  }
+
+}
+
+.no-info {
+  text-align: center;
+  color: rgb(102, 162, 218);
 }
 
 .memo-menu {

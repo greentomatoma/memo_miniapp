@@ -95,6 +95,27 @@ a {
   border-bottom: 1px solid #b6b6b6;
 }
 
+.memo-list .item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 5px;
+  padding: 5px 5px 20px 5px;
+}
+
+.memo-list .active {
+  background-color: #317CF6;
+  color: white;
+}
+
+.no-info {
+  text-align: center;
+  color: #66a2da;
+}
+
 .memo-menu {
   text-align: right;
 }
