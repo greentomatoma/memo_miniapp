@@ -65,18 +65,22 @@
                       <?php foreach($memos as $memo): ?>
                       <a href="./action/select.php?id=<?php echo $memo['id']; ?>" class="memo-list__item">
                           <div class="item-content <?php echo $edit_id == $memo['id'] ? 'active' : ''; ?>">
+                            <div class="content-top">
                               <h5 class="mb-1"><?php echo $memo['title']; ?></h5>
                               <small><?php echo date('Y/m/d H:i', strtotime($memo['updated_at'])); ?></small>
+                            </div>
+                            <div class="content-text">
+                                <p>
+                                    <?php 
+                                    if(mb_strlen($memo['content']) <= 100) {
+                                        echo $memo['content'];
+                                    } else {
+                                        echo mb_substr($memo['content'], 0, 100) . "...";
+                                    }
+                                    ?>
+                                </p>
+                            </div>
                           </div>
-                          <p class="mb-1">
-                              <?php 
-                                if(mb_strlen($memo['content']) <= 100) {
-                                    echo $memo['content'];
-                                } else {
-                                    echo mb_substr($memo['content'], 0, 100) . "...";
-                                }
-                              ?>
-                          </p>
                       </a>
                       <?php endforeach; ?>
                   </div>
