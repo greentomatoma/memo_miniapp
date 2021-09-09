@@ -82,15 +82,21 @@
                   </div>
               </div>
               <div class="memo-input">
-                  <form class="input" method="post">
-                      <input type="hidden" name="edit_id" value="" />
-                      <div class="input__menu">
-                          <button type="submit" class="btn trash" formaction=""><i class="fas fa-trash-alt"></i></button>
-                          <button type="submit" class="btn save" formaction=""><i class="fas fa-save"></i></button>
-                      </div>
-                      <input type="text" id="memo-title" class="input__title" name="edit_title" placeholder="タイトルを入力する..." value="" />
-                      <textarea id="memo-content" name="edit_content" class="input__content" placeholder="内容を入力する..."></textarea>
-                  </form>
+                  <?php  if(isset($_SESSION['select_memo'])): ?>
+                    <form class="input" method="post">
+                        <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>" />
+                        <div class="input__menu">
+                            <button type="submit" class="btn trash" formaction="./action/delete.php"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn save" formaction="./action/update.php"><i class="fas fa-save"></i></button>
+                        </div>
+                        <input type="text" id="memo-title" class="input__title" name="edit_title" placeholder="タイトルを入力する..." value="<?php echo $edit_title; ?>" />
+                        <textarea id="memo-content" name="edit_content" class="input__content" placeholder="内容を入力する..."><?php echo $edit_content; ?></textarea>
+                    </form>
+                  <?php else: ?>
+                    <div class="no-info">
+                        <i class="fas fa-info-circle"></i>メモを新規作成するか選択してください。
+                    </div>
+                  <?php endif ?>
               </div>
           </div>
       </div>
