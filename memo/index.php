@@ -49,7 +49,7 @@
                       </div>
                       <div class="memo-list__btn">
                           <a href="./action/add.php" class="btn plus"><i class="fas fa-plus"></i></a>
-                          <a href="../login/" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
+                          <a href="./action/logout.php" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
                       </div>
                   </div>
                   <div class="memo-list__title">
