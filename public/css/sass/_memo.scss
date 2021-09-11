@@ -9,6 +9,7 @@
 
   &__top {
     display: flex;
+    justify-content: space-around;
   }
 
   &__title {
@@ -19,6 +20,15 @@
   &__item {
     padding: 10px 0;
     border-bottom: 1px solid rgb(182, 182, 182);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    display: flex;
+  }
+
+  .icon {
     display: flex;
     flex-direction: column;
   }
@@ -67,7 +77,10 @@
   flex-direction: column;
 
   &__menu {
+    display: flex;
+    justify-content: flex-end;
     text-align: right;
+    color: white;
   }
 
   &__title {
@@ -76,12 +89,13 @@
 }
 
 
-/* ボタン */
+/* ==================== アイコン ここから ==================== */
 .btn {
   padding: 12px;
+  margin-right: 5px;
   border-radius: 5px;
   color: white;
-  margin-right: 5px;
+  text-align: center;
 }
 
 .plus, .save {
@@ -95,3 +109,20 @@
 .trash {
   background-color: rgb(221, 38, 38);
 }
+
+.hover-menu {
+  display: none;
+  padding: 3px;
+  margin-top: 5px;
+  font-size: 10px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+}
+
+.open {
+  display: block;
+}
+/* ==================== アイコン ここまで　　==================== */

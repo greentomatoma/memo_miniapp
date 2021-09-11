@@ -83,6 +83,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .memo-list__title {
@@ -93,17 +95,47 @@ a {
 .memo-list__item {
   padding: 10px 0;
   border-bottom: 1px solid #b6b6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.memo-list__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.memo-list .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .memo-list .item-content {
+  margin: 0 5px;
+  padding: 5px 5px 20px 5px;
+}
+
+.memo-list .content-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 5px;
-  padding: 5px 5px 20px 5px;
+}
+
+.memo-list .content-text {
+  font-size: 12px;
 }
 
 .memo-list .active {
@@ -137,19 +169,27 @@ a {
 }
 
 .input__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-align: right;
+  color: white;
 }
 
 .input__title {
   font-size: 1.3rem;
 }
 
-/* ボタン */
+/* ==================== アイコン ここから ==================== */
 .btn {
   padding: 12px;
+  margin-right: 5px;
   border-radius: 5px;
   color: white;
-  margin-right: 5px;
+  text-align: center;
 }
 
 .plus, .save {
@@ -163,3 +203,21 @@ a {
 .trash {
   background-color: #dd2626;
 }
+
+.hover-menu {
+  display: none;
+  padding: 3px;
+  margin-top: 5px;
+  font-size: 10px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+}
+
+.open {
+  display: block;
+}
+
+/* ==================== アイコン ここまで　　==================== */

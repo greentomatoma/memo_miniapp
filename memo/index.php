@@ -48,8 +48,14 @@
                           <?php echo $user_name; ?> さん、こんにちは。
                       </div>
                       <div class="memo-list__btn">
-                          <a href="./action/add.php" class="btn plus"><i class="fas fa-plus"></i></a>
-                          <a href="./action/logout.php" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
+                          <div class="icon">
+                              <a href="./action/add.php" class="btn plus"><i class="fas fa-plus"></i></a>
+                              <span class="hover-menu">メモ新規作成</span>
+                          </div>
+                          <div class="icon">
+                              <a href="./action/logout.php" class="btn sign-out"><i class="fas fa-sign-out-alt"></i></a>
+                              <span class="hover-menu">ログアウト</span>
+                          </div>
                       </div>
                   </div>
                   <div class="memo-list__title">
@@ -90,8 +96,14 @@
                     <form class="input" method="post">
                         <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>" />
                         <div class="input__menu">
-                            <button type="submit" class="btn trash" formaction="./action/delete.php"><i class="fas fa-trash-alt"></i></button>
-                            <button type="submit" class="btn save" formaction="./action/update.php"><i class="fas fa-save"></i></button>
+                            <div class="icon">
+                                <button type="submit" class="btn trash" formaction="./action/delete.php"><i class="fas fa-trash-alt"></i></button>
+                                <span class="hover-menu">削除</span>
+                            </div>
+                            <div class="icon">
+                                <button type="submit" class="btn save" formaction="./action/update.php"><i class="fas fa-save"></i></button>
+                                <span class="hover-menu">保存</span>
+                            </div>
                         </div>
                         <input type="text" id="memo-title" class="input__title" name="edit_title" placeholder="タイトルを入力する..." value="<?php echo $edit_title; ?>" />
                         <textarea id="memo-content" name="edit_content" class="input__content" placeholder="内容を入力する..."><?php echo $edit_content; ?></textarea>
@@ -104,5 +116,6 @@
               </div>
           </div>
       </div>
+      <script defer src="../public/js/all.js"></script>
     </body>
 </html>
