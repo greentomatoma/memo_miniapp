@@ -55,6 +55,10 @@
                   <button type="submit" class="form__btn">
                       登録する
                   </button>
+                  <div class="form__text">
+                    <p>アカウントをお持ちの方</p>
+                    <a class="form__rink" href="../login/index.php">ログイン</a>
+                  </div>
                 </div>
               </div>
             </div>
