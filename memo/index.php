@@ -96,8 +96,8 @@
                     <form class="input" method="post">
                         <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>" />
                         <div class="input__menu">
-                            <div class="icon">
-                                <button type="submit" class="btn trash" formaction="./action/delete.php"><i class="fas fa-trash-alt"></i></button>
+                            <div id="trash" class="icon">
+                                <button type="submit" class="btn trash"><i class="fas fa-trash-alt"></i></button>
                                 <span class="hover-menu">削除</span>
                             </div>
                             <div class="icon">
@@ -108,6 +108,22 @@
                         <input type="text" id="memo-title" class="input__title" name="edit_title" placeholder="タイトルを入力する..." value="<?php echo $edit_title; ?>" />
                         <textarea id="memo-content" name="edit_content" class="input__content" placeholder="内容を入力する..."><?php echo $edit_content; ?></textarea>
                     </form>
+                    
+                    <!-- 削除モーダル -->
+                    <div class="delete" id="delete-modal" method="post">
+                        <input type="hidden" name="edit_id" value="<?php echo $edit_id; ?>" />
+                        <form class="delete-modal">
+                            「 <?php echo $edit_title; ?> 」を本当に削除しますか？
+                            <div class="modal-text">
+                                <div class="close-modal">
+                                    キャンセル
+                                </div>
+                                <div class="delete-btn">
+                                    <button type="submit" formaction="./action/delete.php">削除</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                   <?php else: ?>
                     <div class="no-info">
                         <i class="fas fa-info-circle"></i>メモを新規作成するか選択してください。

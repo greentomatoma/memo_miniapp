@@ -9,4 +9,15 @@ $(document).ready(function() {
       $(this).find('.hover-menu').removeClass('open');
     }
   )
-})
+
+  // 削除モーダル 表示
+  $('#trash').click(function() {
+    $('#delete-modal').fadeIn();
+  });
+
+  // 削除モーダル 閉じる
+  $('.close-modal').click(function() {
+    $('#delete-modal').fadeOut();
+  });
+
+});
