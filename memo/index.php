@@ -44,9 +44,6 @@
           <div class="memo">
               <div class="memo-list">
                   <div class="memo-list__top">
-                      <div class="user-name">
-                          <?php echo $user_name; ?> さん、こんにちは。
-                      </div>
                       <div class="memo-list__btn">
                           <div class="icon">
                               <a href="./action/add.php" class="btn plus"><i class="fas fa-plus"></i></a>
