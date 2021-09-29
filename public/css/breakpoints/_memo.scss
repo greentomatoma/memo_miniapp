@@ -1,11 +1,17 @@
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
 .memo {
+  @extend .content-width;
   display: flex;
+  flex-direction: column;
   margin-top: 18px;
 }
 
 .memo-list {
-  width: 25%;
-  border-right: 1px solid rgb(182, 182, 182);
 
   &__top {
     display: flex;
@@ -64,14 +70,6 @@
 }
 
 
-
-/* 右側 */
-
-.memo-input {
-  width: 70%;
-  margin-left: 10px;
-}
-
 .input {
   display: flex;
   flex-direction: column;
@@ -91,14 +89,24 @@
 
 /* ==================== アイコン ここから ==================== */
 .btn {
-  padding: 12px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
   border-radius: 5px;
   color: white;
   text-align: center;
+
+    & > i {
+      position: relative;
+        &::before {
+          position: absolute;
+          top: -11px;
+          left: -6px;
+        }
+    }
 }
 
-.plus, .save {
+.plus {
   background-color: rgb(25, 148, 25);
 }
 
@@ -107,7 +115,13 @@
 }
 
 .trash {
-  background-color: rgb(221, 38, 38);
+  // background-color: rgb(221, 38, 38);
+  color: rgb(221, 38, 38) !important;
+}
+
+.save {
+  // background-color: rgb(221, 38, 38);
+  color: rgb(25, 148, 25) !important;
 }
 
 .hover-menu {
