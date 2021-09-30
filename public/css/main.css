@@ -67,24 +67,30 @@ a {
   border-right: 1px solid lightgray;
 }
 
+.content-width, .memo {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
 .memo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 18px;
-}
-
-.memo-list {
-  width: 25%;
-  border-right: 1px solid #b6b6b6;
 }
 
 .memo-list__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .memo-list__title {
@@ -152,10 +158,8 @@ a {
   text-align: right;
 }
 
-/* 右側 */
 .memo-input {
-  width: 70%;
-  margin-left: 10px;
+  width: 100%;
 }
 
 .input {
@@ -177,22 +181,39 @@ a {
           justify-content: flex-end;
   text-align: right;
   color: white;
+  background-color: white;
 }
 
 .input__title {
   font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.input__content {
+  height: 200px;
 }
 
 /* ==================== アイコン ここから ==================== */
 .btn {
-  padding: 12px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
   border-radius: 5px;
   color: white;
   text-align: center;
 }
 
-.plus, .save {
+.btn > i {
+  position: relative;
+}
+
+.btn > i::before {
+  position: absolute;
+  top: -11px;
+  left: -6px;
+}
+
+.plus {
   background-color: #199419;
 }
 
@@ -201,7 +222,11 @@ a {
 }
 
 .trash {
-  background-color: #dd2626;
+  color: #dd2626 !important;
+}
+
+.save {
+  color: #199419 !important;
 }
 
 .hover-menu {
@@ -272,3 +297,46 @@ a {
 }
 
 /* ==================== 削除モーダル ここまで ==================== */
+@media (min-width: 600px) {
+  /***************************************************************
+
+ タブレットサイズ用 600px以上の画面サイズに適用
+
+****************************************************************/
+  .memo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .memo-list {
+    margin-right: 20px;
+  }
+  .memo-list__top {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .memo-list .content-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 960px) {
+  /***************************************************************
+
+ PCサイズ用 960px以上の画面サイズに適用
+
+****************************************************************/
+}
+
+@media (min-width: 1280px) {
+  /***************************************************************
+
+ 1280px以上の画面サイズに適用
+
+****************************************************************/
+}
