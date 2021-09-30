@@ -3,3 +3,21 @@
  タブレットサイズ用 600px以上の画面サイズに適用
 
 ****************************************************************/
+
+
+.memo {
+  flex-direction: row;
+}
+
+.memo-list {
+
+  margin-right: 20px;
+
+  &__top {
+    justify-content: flex-start;
+  }
+
+  .content-top {
+    flex-direction: column;
+  }
+}
