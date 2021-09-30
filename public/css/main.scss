@@ -1,9 +1,10 @@
-@import './sass/error';
-@import './sass/base';
+@import "sass/error";
+@import "sass/base";
 
-@import './sass/auth';
-@import './sass/memo';
+@import "sass/auth";
 
+// ベース
+@import "breakpoints/memo";
 
 // タブレット画面に対応
 @media (min-width: 600px) {
